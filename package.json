@@ -100,8 +100,5 @@
       "admin/",
       "packages/"
     ]
-  },
-  "dependencies": {
-    "@headlessui-float/react": "^0.13.3"
   }
 }
