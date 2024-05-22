@@ -71,7 +71,7 @@ export default function NewChat({
   const { conversation } = store.useCreateConversationAtom(index);
 
   const clickHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    if (event.button === 0 && !event.ctrlKey) {
+    if (event.button === 0 && !(event.ctrlKey || event.metaKey)) {
       event.preventDefault();
       newConvo();
       navigate('/c/new');
@@ -82,7 +82,7 @@ export default function NewChat({
   return (
     <TooltipProvider delayDuration={250}>
       <Tooltip>
-        <div className="static left-0 right-0 top-0 z-20 bg-gray-50 dark:bg-gray-750 pt-0">
+        <div className="static left-0 right-0 top-0 z-20 bg-gray-50 pt-0 dark:bg-gray-750">
           <div className="pb-0.5 last:pb-0" tabIndex={0} style={{ transform: 'none' }}>
             <a
               href="/"
