@@ -36,6 +36,7 @@ export default function ExportAndShareMenu() {
 
   return (
     <HoverToggle
+      className="static"
       isActiveConvo={!!isActiveConvo}
       isPopoverActive={isPopoverActive}
       setIsPopoverActive={setIsPopoverActive}

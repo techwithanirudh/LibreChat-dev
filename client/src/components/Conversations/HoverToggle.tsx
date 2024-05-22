@@ -3,11 +3,13 @@ import { ToggleContext } from './ToggleContext';
 import { cn } from '~/utils';
 
 const HoverToggle = ({
+  className,
   children,
   isActiveConvo,
   isPopoverActive,
   setIsPopoverActive,
 }: {
+  className: string;
   children: React.ReactNode;
   isActiveConvo: boolean;
   isPopoverActive: boolean;
@@ -24,6 +26,7 @@ const HoverToggle = ({
             ? 'from-gray-50 from-85% to-transparent group-hover:bg-gradient-to-l group-hover:from-gray-200 dark:from-gray-800 dark:group-hover:from-gray-800'
             : 'z-50 from-gray-200 from-gray-50 from-0% to-transparent hover:bg-gradient-to-l hover:from-gray-200 dark:from-gray-750 dark:from-gray-800 dark:hover:from-gray-800',
           isPopoverActive && !isActiveConvo ? 'from-gray-50 dark:from-gray-800' : '',
+          className,
         )}
       >
         {children}
